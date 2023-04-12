@@ -34,7 +34,7 @@ body {
 .introInfo {
     position: relative;
     color:black;
-    top: -2%;
+    top: -1.5%;
 }
 
 .personalIcons {
@@ -143,4 +143,16 @@ p {
 
 .experienceTitle {
     font-weight: bold;
+}
+
+.reveal {
+    position: relative;
+    transform: translateY(150px);
+    opacity: 0;
+    transition: 2s all ease;
+}
+
+.reveal.active {
+transform: translateY(0);
+opacity: 1;
 }
