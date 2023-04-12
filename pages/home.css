@@ -1,7 +1,6 @@
 body {
     font-family: 'Lato', sans-serif;
     font-size: 16px;
-    
 }
 
 .introSection {
@@ -149,7 +148,7 @@ p {
     position: relative;
     transform: translateY(150px);
     opacity: 0;
-    transition: 2s all ease;
+    transition: 1.5s all ease;
 }
 
 .reveal.active {
