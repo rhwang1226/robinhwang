@@ -4,30 +4,35 @@ body {
 }
 
 .introSection {
-    background-image: url("resources/introBackground.jpg");
+    background-color:whitesmoke;
     display: flex;
     width: 100%;
+    height:auto;
     font-family: 'Lato', sans-serif;
+    z-index:-1;
+    background-image: url(resources/robin3.jpg);
+    background-size: 100%;
 }
 
 .introSection .left {
-    margin-right: auto;
-    margin-left: 10%;
+    margin-right: 3%;
+    margin-left: auto;
+    text-align:right;
     width: 35%;
 }
 
 .introSection .right {
-    margin-right: 3%;
-    margin-left: auto;
+    margin-right: auto;
+    margin-left: 5%;
     width: 55%;
 }
 
 .robinImg {
     position: relative;
-    max-width:95%;
-    max-height:95%;
     height: auto;
-    bottom: -5%;
+    max-width: 125%;
+    max-height: 125%;
+    margin-left:12%;
 }
 
 .introInfo {
@@ -36,8 +41,8 @@ body {
     top: -1.5%;
 }
 
-.personalIcons {
-    margin-left:-2%;
+.iconBar {
+    margin-left: auto;
 }
 
 #navbar {
@@ -54,6 +59,12 @@ body {
     text-align: center;
     font-family: 'Lato', sans-serif;
     color:black;
+}
+
+.box {
+    padding-top:15%;
+    padding-left:15%;
+    padding-right:15%;
 }
 
 #helloWorldBg {
@@ -93,23 +104,17 @@ body {
 
 h1 {
     text-align: center;
-    padding-top: 15%;
-    padding-bottom:5%;
     font-size: 3.5em;
     font-weight: bold;
 }
 
 h6 {
     font-size:2rem;
-    padding-left: 10%;
-    padding-right: 10%;
     text-align: center;
 }
 
 p {
     font-size:1.6rem;
-    padding-left: 10%;
-    padding-right: 10%;
 }
 
 #languagesBg {
