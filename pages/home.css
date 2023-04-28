@@ -43,3 +43,8 @@ body {
     color:#576CBC;
 }
 
+@media only screen and (max-device-width : 768px) {
+    .mobile-device {
+        padding: 0;
+    }
+}
