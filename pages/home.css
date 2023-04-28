@@ -34,10 +34,12 @@ body {
     color: #00FFCA;
 }
 
-.title {
+.introTitle {
     font-size: 4.8rem;
+    font-weight: bold;
 }
 
 .subtitle {
     color:#576CBC;
 }
+
