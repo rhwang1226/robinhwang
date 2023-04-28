@@ -5,195 +5,92 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <title>Robin Hwang</title>
-        <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.3/dist/jquery.min.js"></script>
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400&display=swap" rel="stylesheet">
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
-        <link rel="stylesheet" href="./home.css">
+        <link href="https://fonts.googleapis.com/css2?family=Inter&family=M+PLUS+1+Code&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+        <link rel="stylesheet" href="home.css">
     </head>
     <body>
-        <div class="introSection">
-            <div class="left">
+        <nav class="navbar blue1Bg px-6 is-fixed-top" role="navigation" aria-label="main navigation">
+            <div class="navbar-brand">
+                <a class="navbar-item" href="index.html">
+                    <img src="resources/logo.PNG" style="max-height: 70px;" class="py-2 px-2">
+                </a>
+                <a role="button" class="navbar-burger blue2Bg" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+                    <span aria-hidden="true" class="blue4"></span>
+                    <span aria-hidden="true" class="blue4"></span>
+                    <span aria-hidden="true" class="blue4"></span>
+                  </a>
             </div>
-            <div class="right">
-                <div class="introInfo" style="font-size: 9.4vw; font-weight:bold;padding-top: 7%;">ROBIN HWANG</div>
-                <div class="introInfo" style="font-size: 3.2vw; left:1%; padding-bottom: 7%;">
-                    Undergraduate Student at the <a href="https://www.umich.edu/" target="_blank" style="color:black; text-decoration:none; font-weight: bold;">University of Michigan</a>
-                </div>
-            </div>
-        </div>
-
-        <!-- NAVBAR -->
-        <ul class="nav nav-underline justify-content-center sticky-top py-2" id="navbar">
-            <li class="nav-item navbar-item" id="home">
-              <a class="nav-link active" style="color:white;" aria-current="page" href="#">Home</a>
-            </li>
-            <li class="nav-item navbar-item">
-                <a class="nav-link" href="worldofhellos.html" style="color:white;">A World of Hellos</a>
-              </li>
-            <li class="nav-item navbar-item">
-              <a class="nav-link" href="relevantexperience.html" style="color:white;">Projects and Experience</a>
-            </li>
-            <li class="nav-item navbar-item">
-              <a class="nav-link" href="#" style="color:white;">The Robin Chronicles</a>
-            </li>
-        </ul>
-        
-        <div class="box" id="helloWorldBg">
-            <div class="container-sm reveal">
-                <h1 id="helloWorldTitle" style="padding-bottom:5%;">Nice to meet you, I'm Robin!</h1>
-                <h6 style="text-align: center;">Hey there! My name is Robin Hwang and I am currently an undergraduate student at the University of
-                    Michigan College of Literature, Science, and the Arts (LSA). I attend the Ann Arbor (Main) campus. My
-                    interests are in the field of computer science and am open to new experiences. I am
-                    orignally from New York and plan to complete my Bachelor of Science in Computer Science by May
-                    2026.
-                </h6>
-            </div>
-        </div>
-
-        <div class="box" id="mbtiBg">
-            <div class="container-sm reveal">
-                <h1>Myers-Briggs</h1>
-                <h2 class="mbtiName">Turbulent Consul (ESFJ-T)</h2>
-                <div class="empty"></div>
-    
-                <span class="mbtiLbls" style="font-weight:bold">Extroverted</span>
-                <span class="mbtiLbls" style="float:right;">Introverted</span>
-                <div class="progress" style="height:40px;">
-                    <div class="progress-bar mbti1" role="progressbar" style="width: 0%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
-                        <span class="mbtiBars">64%</span>
-                    </div>
-                </div>
-    
-                <div class="empty"></div>
-    
-                <span class="mbtiLbls">Intuitive</span>
-                <span class="mbtiLbls" style="float:right;font-weight:bold">Sensing</span>
-                <div class="progress justify-content-end" style="height:40px;">
-                    <div class="progress-bar mbti2" role="progressbar" style="width: 0%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
-                        <span class="mbtiBars" style="text-align:right;margin-right:1%">54%</span>
-                    </div>
-                </div>
+            
+            <div id="navbarBasicExample" class="navbar-menu" style="background-color: #06283D; font-size: 1.3rem;">
+                <div class="navbar-end">
+                    <a class="navbar-item blue4 px-5" href="#topSec">
+                        Home
+                    </a>
                 
-                <div class="empty"></div>
-    
-                <span class="mbtiLbls">Thinking</span>
-                <span class="mbtiLbls" style="float:right;font-weight:bold">Feeling</span>
-                <div class="progress justify-content-end" style="height:40px;">
-                    <div class="progress-bar mbti3" role="progressbar" style="width: 0%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
-                        <span class="mbtiBars" style="text-align:right;margin-right:1%">65%</span>
-                    </div>
-                </div>
-    
-                <div class="empty"></div>
-    
-    
-                <span class="mbtiLbls" style="font-weight:bold">Judging</span>
-                <span class="mbtiLbls" style="float:right;">Perceiving</span>
-                <div class="progress" style="height:40px;">
-                    <div class="progress-bar mbti4" role="progressbar" style="width: 0%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
-                        <span class="mbtiBars">94%</span>
-                    </div>
+                    <a class="navbar-item blue4 px-5" href="#aboutMe">
+                        About Robin
+                    </a>
+                
+                    <a class="navbar-item blue4 px-5">
+                        Documentation
+                    </a>
+
                 </div>
             </div>
-        </div>
+        </nav>
         
-
-        <div class="box" id="languagesBg">
-            <div class="container-sm reveal" id="languagesSection">
-                <h1 id="helloWorldTitle" style="padding-bottom:5%;">My Languages</h1>
-                <div class="row">
-                    <div class="col languageDivs" data-toggle="tooltip" data-placement="top">
-                        <button class="btn" data-toggle="tooltip" data-placement="top" title="C++" onclick=" window.open('http://cplusplus.com','_blank')">
-                            <img class="languages" src="resources/c++.png">
-                        </button>
-                        
-                    </div>
-                    <div class="col languageDivs">
-                        <button class="btn" data-toggle="tooltip" data-placement="top" title="Java" onclick=" window.open('http://java.com','_blank')">
-                            <img class="languages" src="resources/java.png">
-                        </button>
-                    </div>
-                    <div class="col languageDivs">
-                        <button class="btn" data-toggle="tooltip" data-placement="top" title="Python" onclick=" window.open('http://python.org','_blank')">
-                            <img class="languages" src="resources/python.png">
-                        </button>
-                    </div>
-                    <div class="col languageDivs">
-                        <button class="btn" data-toggle="tooltip" data-placement="top" title="MIT Scratch" onclick=" window.open('http://scratch.mit.edu','_blank')">
-                            <img class="languages" src="resources/scratch.png">
-                        </button>
-                    </div>
-                </div>
-                <div class="row" style="padding-top:5%">
-                    <div class="col languageDivs">
-                        <button class="btn" data-toggle="tooltip" data-placement="top" title="HTML 5" onclick=" window.open('https://developer.mozilla.org/en-US/docs/Web/HTML','_blank')">
-                            <img class="languages" src="resources/html.png">
-                        </button>
-                    </div>
-                    <div class="col languageDivs">
-                        <button class="btn" data-toggle="tooltip" data-placement="top" title="CSS 3" onclick=" window.open('https://developer.mozilla.org/en-US/docs/Web/CSS','_blank')">
-                            <img class="languages" src="resources/css.png">
-                        </button>
-                    </div>
-                    <div class="col languageDivs">
-                        <button class="btn" data-toggle="tooltip" data-placement="top" title="JavaScript" onclick =" window.open('https://javascript.com','_blank')">
-                            <img class="languages" src="resources/javascript.png">
-                        </button>
-                    </div>
-                    <div class="col languageDivs">
-                        <button class="btn" data-toggle="tooltip" data-placement="top" title="C#" onclick =" window.open('https://learn.microsoft.com/en-us/dotnet/csharp/','_blank')">
-                            <img class="languages" src="resources/csharp.png">
-                        </button>
-                    </div>
-    
-                <h6 style="text-align: center; padding-top:5%">
-                    In addition to the computer languages above, I can speak, read, and write in English and <span data-toggle="tooltip" data-placement="top" title="Fun fact: I speak using a dialect of Korean (South Gyeongsang dialect)!" style="font-weight: bold;">Korean</span> in native-level proficiency, and Spanish in professional proficiency.
-                </h6>
+        <section id="topSec" class="section is-large blue1Bg">
+            <div class="container px-6">
+                <div class="container px-6">
+                    <p class="codeFont pb-6 green1" style="font-size: 1.3rem;">Nice to meet you, I'm</p>
+                    <h1 class="title blue4 pb-3">Robin Hwang.</h1>
+                    <h3 class="blue3 pb-5" style="font-size:1.2rem">
+                    I'm currently an undergraduate student at the <a href="https://umich.edu/" class="green1">University of Michigan</a>. My
+                    interests are in the field of computer science and am open to new experiences.
+                    </h3>
+                    <h3 class="blue3" style="font-size:1.2rem">Go blue!</h3>
                 </div>
             </div>
-        </div>
+        </section>
 
-        <div class="box" id="otherWorkVolunteerBg">
-            <div class="container-sm reveal">
-                <h1>Other Work Experience</h1>
-                <p class="experienceTitle">Hospital Volunteer</p>
-                <p class="experienceLoc">Stony Brook University Medical Center</p>
-                <p class="experienceDesc">
-                    As a volunteer in the Mother-Baby Unit, I assisted parents through the process of applying their newborn for social security and receiving their birth certificate. I also checked on patients periodically to see if they needed anything (comfort rounding). Additionally, I made sure all newborns received their appropriate vaccinations prior to leaving the hospital.
-                </p>
-    
-                <div class="empty"></div>
-    
-                <p class="experienceTitle">Lifeguard</p>
-                <p class="experienceLoc">Splish Splash Waterpark by Palace Entertainment</p>
-                <p class="experienceDesc">
-                    My responsibilities as a lifeguard included maintaining a consistent 10/20 scan for guests in distress, administering first aid/CPR/AED to injured or unresponsive guests, providing quality customer service, and enforcing park safety regulations at Long Island's largest waterpark.
-                </p>
-    
-                <div class="empty"></div>
-    
-                <p class="experienceTitle">Language Tutor</p>
-                <p class="experienceLoc">Freelance</p>
-                <p class="experienceDesc">
-                    As a tutor, I taught English to students in South Korea through live virtual sessions using Zoom. I assisted students with coursework in their school's English class, helped them to communicate in English more easily, and prepared them for any standardized testing on English.
-                </p>
-            </div>
-            <div class="empty"></div>
-            <div class="empty"></div>
-        </div>
+        <section class="section is-large blue1Bg"></section>
+        <section class="section is-small blue1Bg" id="aboutMe"></section>
 
-        <div id="footer">
-            <div class="container-sm">
-                <div class="empty"></div>
-                <div>Made With ❤ by Robin Hwang</div>
-                <div>Last Updated on April 22, 2023</div>
-                <div class="empty"></div>
+        <section id="aboutMeSec" class="is-large blue1Bg">
+            <div class="container px-6">
+                <div class="container px-6">
+                    <p class="pb-6 green1"><strong class="green1 is-size-3">A More Formal Introduction</strong></p>
+                    <h3 class="blue3 pb-5" style="font-size:1.2rem">
+                        Greetings and salutations! My name is Robin Hwang, and I currently study at the University of Michigan. My interests
+                        lie in computer science and product management. I enjoy taking on leadership positions and steering a group with passion.
+                    </h3>
+                    <h3 class="blue3 pb-5" style="font-size:1.2rem">
+                        I am originally from New York, born and raised. I have lived downstate all my life. So far, I have to say that East Coast
+                        life is far superior to the Midwestern life that I have been living in Michigan. Always subject to change, however.
+                    </h3>
+                    <h3 class="blue3 pb-5" style="font-size:1.2rem">
+                        It had to be around 2017 when I first started to develop and interest in computer science. I was always curious about
+                        what could be powering my search engine (Google), my television, the games I played, and my cell phone. I remember
+                        stumbling upon articles about circuits and hardware. Quite frankly, I wasn't really interested. I wanted to know where
+                        the logic was happening and where the decisions were being made. After a little more surfing on the web, I discovered
+                        computer science and programming.
+                    </h3>
+                    <h3 class="blue3 pb-5" style="font-size:1.2rem">
+                        With the word "programming" at the back of my head, I decided to enroll in a programming course during my freshman year
+                        of high school. It was called "Introduction to Programming With Python." Although it was an intro-level course, I learned
+                        a great deal about the basics of programming and logic. My curiosity was piqued, and I decided to continue my computer
+                        science education throughout the rest of my years of high school and eventually study it at the University of Michigan.
+                        Which is where I am today.
+                    </h3>
+                </div>
             </div>
-        </div>
-        
+        </section>
+
+        <section class="section is-large blue1Bg"></section>
+
         <script src="home.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
     </body>
 </html>

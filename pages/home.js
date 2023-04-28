@@ -1,36 +1,21 @@
-$(function () {
-    $('[data-toggle="tooltip"]').tooltip()
-  })
+document.addEventListener('DOMContentLoaded', () => {
 
+  // Get all "navbar-burger" elements
+  const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
 
-function reveal() {
-    var reveals = document.querySelectorAll(".reveal");
-    for (var i = 0; i < reveals.length; i++) {
-      var windowHeight = window.innerHeight;
-      var elementTop = reveals[i].getBoundingClientRect().top;
-      var elementVisible = 150;
-      if (elementTop < windowHeight - elementVisible) {
-        reveals[i].classList.add("active");
-      } else {
-        reveals[i].classList.remove("active");
-      }
-    }
-}
+  // Add a click event on each of them
+  $navbarBurgers.forEach( el => {
+    el.addEventListener('click', () => {
 
-window.addEventListener("scroll", reveal);
+      // Get the target from the "data-target" attribute
+      const target = el.dataset.target;
+      const $target = document.getElementById(target);
 
-$(".mbti1").animate({
-    width: "66%",
-}, 1000);
-    
-$(".mbti2").animate({
-    width: "54%",
-}, 1000);
+      // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+      el.classList.toggle('is-active');
+      $target.classList.toggle('is-active');
 
-$(".mbti3").animate({
-    width: "59%",
-}, 1000);
+    });
+  });
 
-$(".mbti4").animate({
-    width: "94%",
-}, 1000);
+});
