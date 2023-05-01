@@ -48,12 +48,20 @@ body {
 }
 
 .cardTitle {
-    font-size:1.7rem;
+    font-size:1.5rem;
     font-weight: bold;
 }
 
 .cardSubtitle {
     font-size:1.3rem;
+}
+
+.cardHover {
+    transition: all 0.3s;
+}
+
+.cardHover:hover {
+    transform: scale(1.03);
 }
 
 
