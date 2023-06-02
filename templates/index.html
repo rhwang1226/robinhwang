@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Robin Hwang</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter&family=M+PLUS+1+Code&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+        <link href="{{ url_for('static', filename='style.css' ) }}" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        {% include 'navbar.html' %}
+
+        <section id="topSec" class="section is-large blue1Bg">
+            <div class="container">
+                <p class="codeFont pb-5 green1" style="font-size: 1.3rem;">Nice to meet you, I'm</p>
+                <h1 class="introTitle pb-5 blue4">Robin Hwang.</h1>
+                <h3 class="blue3 pb-5" style="font-size:1.2rem">
+                I'm currently an undergraduate student at the <a href="https://umich.edu/" class="green1">University of Michigan</a>. My
+                interests are in the field of computer science and am open to new experiences.
+                </h3>
+                <a href="https://github.com/plaine1226"><ion-icon name="logo-github" class="icon is-large blue3 pr-5"></ion-icon></a>
+                <a href="https://www.linkedin.com/in/hwangr/"><ion-icon name="logo-linkedin" class="icon is-large blue3 pr-5"></ion-icon></a>
+                <a href="mailto:rlhwang@umich.edu"><ion-icon name="mail-outline" class="icon is-large blue3 pr-5"></ion-icon></a>
+                <a href="https://orcid.org/0000-0003-0161-7179"><ion-icon name="key-outline" class="icon is-large blue3"></ion-icon></a>
+            </div>
+        </section>
+
+        <section class="section is-large blue1Bg"></section>
+
+        <section class="section is-large blue1Bg">
+            <div id="aboutRobin" class="container">
+                <p class="pb-5 green1"><strong class="green1 is-size-3">A More Formal Introduction</strong></p>
+                <figure class="image"style="margin:1%; float:right;vertical-align:top;">
+                    <img class="image is-rounded" src="{{ url_for('static', filename='resources/robin3.jpg' ) }}" style="margin:0;">
+                </figure>
+                <h3 class="blue3 pb-5" style="font-size:1.2rem">
+                    Greetings and salutations! My name is Robin Hwang, and I currently study at the University of Michigan. My interests
+                    lie in computer science, specifically full stack development and machine learning. I enjoy taking on leadership and 
+                    managerial positions and steering a group with passion.
+                </h3>
+                
+                <h3 class="blue3 pb-5" style="font-size:1.2rem">
+                    I am originally from New York, born and raised. I have lived downstate all my life. So far, I have to say that East Coast
+                    life is far superior to the Midwestern life that I have been living in Michigan. Always subject to change, however.
+                </h3>
+                <h3 class="blue3 pb-5" style="font-size:1.2rem">
+                    It had to be around 2017 when I first started to develop and interest in computer science. I was always curious about
+                    what could be powering my search engine (Google), my television, the games I played, and my cell phone. I remember
+                    stumbling upon articles about circuits and hardware. Quite frankly, I wasn't really interested. I wanted to know where
+                    the logic was happening and where the decisions were being made. After a little more surfing on the web, I discovered
+                    computer science and programming.
+                </h3>
+                <h3 class="blue3" style="font-size:1.2rem">
+                    With the word "programming" at the back of my head, I decided to enroll in a programming course during my freshman year
+                    of high school. It was called "Introduction to Programming With Python." Although it was an intro-level course, I learned
+                    a great deal about the basics of programming and logic. My curiosity was piqued, and I decided to continue my computer
+                    science education throughout the rest of my years of high school and eventually study it at the University of Michigan.
+                    Which is where I am today.
+                </h3> 
+            </div>
+
+            <section class="hero is-medium">
+                <div class="hero-body">
+                </div>
+            </section>
+
+            <div id="mbti" class="container">
+                <p class="pb-5"><strong class="green1 is-size-3">Robin's Myers-Briggs (MBTI)</strong></p>
+                <p class="pb-5"><strong class="blue4 is-size-4">ESFJ - Turbulent Consul</strong></p>
+                <div class="pb-5">
+                    <span class="blue3 codeFont" style="font-size:1.2rem; font-weight:bold;">Extraversion (64%)</span>
+                    <span class="blue3 codeFont" style="font-size:1.2rem; float: right;">Introversion (36%)</span>
+                    <progress class="progress is-large is-primary" value="64" max="100">64%</progress>
+                </div>
+                <div class="pb-5"> 
+                    <span class="blue3 codeFont" style="font-size:1.2rem; font-weight:bold;">Intuition (52%)</span>
+                    <span class="blue3 codeFont" style="font-size:1.2rem; float: right;">Sensing (48%)</span>
+                    <progress class="progress is-large is-primary" value="52" max="100">52%</progress>
+                </div>
+                <div class="pb-5">
+                    <span class="blue3 codeFont" style="font-size:1.2rem; font-weight:bold;">Feeling (59%)</span>
+                    <span class="blue3 codeFont" style="font-size:1.2rem; float: right;">Thinking (41%)</span>
+                    <progress class="progress is-large is-primary" value="59" max="100">59%</progress>
+                </div>
+                <div class="pb-5">
+                    <span class="blue3 codeFont" style="font-size:1.2rem; font-weight:bold;">Judging (93%)</span>
+                    <span class="blue3 codeFont" style="font-size:1.2rem; float: right;">Perceiving (7%)</span>
+                    <progress class="progress is-large is-primary" value="93" max="100">93%</progress>
+                </div>
+            </div>
+        </section>
+
+        <section class="section is-large blue1Bg"></section>
+
+        <section class="section is-large blue1Bg">
+            <div id="projectsAndExperience" class="container">
+                <p class="pb-5 green1"><strong class="green1 is-size-3">Relevant Experience</strong></p>
+                <div class="card blue2Bg blue3">
+                    <div class="card-content">
+                        <div class="media">
+                            <div class="media-content">
+                                <p class="cardTitle">Stanford Linear Accelerator Center - Machine Learning Intern</p>
+                                <p class="cardSubtitle blue4">June 2023 - August 2023</p>
+                            </div>
+                        </div>
+                  
+                        <div class="content">
+                            More to come about this experience after August 2023. Stay tuned!
+                        </div>
+                    </div>
+                </div>
+
+                <section class="hero is-small">
+                    <div class="hero-body"></div>
+                </section>
+
+                <div class="card cardHover blue2Bg">
+                    <a href="">
+                        <div class="card-content blue3">
+                            <div class="media">
+                                <div class="media-content">
+                                    <p class="cardTitle">Computer Science Club - President</p>
+                                    <p class="cardSubtitle blue4">September 2021 - May 2022</p>
+                                </div>
+                            </div>
+                    
+                            <div class="content blue3">
+                                <ul>
+                                    <li>
+                                        As president, led club by running meetings, introducing concepts in Computer
+                                        Science, and preparing code stubs for club activities.
+                                    </li>
+                                    <li>
+                                        Taught binary, cryptography (Hill Cipher, Atbash Cipher, Vigenère Cipher, etc.),
+                                        HTML, CSS, JavaScript, discrete mathematics, bot programming in Python, etc.
+                                    </li>
+                                    <li>
+                                        Ran “unplugged” meetings which introduced Computer Science concepts without
+                                        the use of computers
+                                    </li>
+                                </ul>
+                                <br>
+                                Tools Used: Python, Java, HTML, CSS, JavaScript, Google Suite, Microsoft Office Tools
+                                <br>
+                                Skills: Computer Science, Leadership, Teamwork, Collaboration
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <section class="hero is-medium">
+                <div class="hero-body"></div>
+            </section>
+
+            <div id="personalProjects" class="container reveal">
+                <p class="pb-5 green1"><strong class="green1 is-size-3">Personal Projects</strong></p>
+                <div class="card cardHover blue2Bg">
+                    <a href="https://playlyricle.netlify.app/">
+                        <div class="card-content blue3">
+                            <div class="media">
+                                <div class="media-content">
+                                    <p class="cardTitle">Lyricle</p>
+                                    <p class="cardSubtitle blue4">February 2022</p>
+                                </div>
+                            </div>
+                    
+                            <div class="content">
+                                <ul>
+                                    <li>
+                                        Created an online game in JavaScript where users have six tries to figure out the
+                                        name of a song based on its lyrics
+                                    </li>
+                                    <li>
+                                        Launched application on Netlify to allow users anywhere in the world to play
+                                    </li>
+                                </ul>
+                                <br>
+                                Tools Used: HTML, CSS, JavaScript, Netlify, Git
+                                <br>
+                                Skills: Computer Science, Web Design, Teamwork
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <section class="hero is-small">
+                    <div class="hero-body"></div>
+                </section>
+
+                <div class="card cardHover blue2Bg">
+                    <a href="https://github.com/plaine1226/Commack-Room-Reservation-System">
+                        <div class="card-content blue3">
+                            <div class="media">
+                                <div class="media-content">
+                                    <p class="cardTitle">Room Reservation System</p>
+                                    <p class="cardSubtitle blue4">June 2021 - January 2022</p>
+                                </div>
+                            </div>
+                    
+                            <div class="content blue3">
+                                <ul>
+                                    <li>
+                                        Developed a room reservation system in Java for faculty to reserve computer labs
+                                        and multipurpose classrooms for over 150 faculty members
+                                    </li>
+                                    <li>
+                                        Implemented sorting and search algorithms (binary search) to allow admins to
+                                        search for registered faculty members
+                                    </li>
+                                    <li>
+                                        Designed a GUI for easy use by school faculty using Swing and AWT
+                                    </li>
+                                    <li>
+                                        Installed application on the district's LAN (local area network) to prevent access to
+                                        users outside of the district
+                                    </li>
+                                </ul>
+                                <br>
+                                Tools Used: Java, Git
+                                <br>
+                                Skills: Computer Science, Collaboration, Algorithms, Problem Solving
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <section class="hero is-small">
+                    <div class="hero-body"></div>
+                </section>
+
+                <div class="card cardHover blue2Bg">
+                    <a href="https://github.com/plaine1226/COVInsight">
+                        <div class="card-content blue3">
+                            <div class="media">
+                                <div class="media-content">
+                                    <p class="cardTitle">COVInsight</p>
+                                    <p class="cardSubtitle blue4">September 2020 - April 2021</p>
+                                </div>
+                            </div>
+                    
+                            <div class="content blue3">
+                                <ul>
+                                    <li>
+                                        Using phylogenetic data from Nextstrain, created database of every SARS-CoV-2
+                                        variant (over 5000) using Python
+                                    </li>
+                                    <li>
+                                        Designed front end in Swing and AWT in Java
+                                    </li>
+                                    <li>
+                                        Utilized pandas library in Python to perform analyses/read TSV files of variant
+                                        data
+                                    </li>
+                                </ul>
+                                <br>
+                                Tools Used: Java, Python, Database, Git
+                                <br>
+                                Skills: Computer Science, Algorithms, Database Analysis, Research, GUI Development
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <section class="hero is-small">
+                    <div class="hero-body"></div>
+                </section>
+
+                <div class="card blue2Bg">
+                    <div class="card-content blue3">
+                        <div class="media">
+                            <div class="media-content">
+                                <p class="cardTitle">Discord Bot</p>
+                                <p class="cardSubtitle blue4">March 2020 - June 2020</p>
+                            </div>
+                        </div>
+                
+                        <div class="content blue3">
+                            <ul>
+                                <li>
+                                    Used Python to develop a bot for the messaging application Discord that
+                                    automatically replies to certain trigger words sent in the chat
+                                </li>
+                                <li>
+                                    Hosted bot to keep running even when IDE is closed using the Flask web
+                                    framework
+                                </li>
+                                <li>
+                                    Created tutorials on how to make Discord bots through a series of videos on
+                                    YouTube channel
+                                </li>
+                            </ul>
+                            <br>
+                            Tools Used: Python, Flask, UptimeMonitor
+                            <br>
+                            Skills: Computer Science, Web Hosting, Server-Side Coding, API Usage
+                        </div>
+                    </div>
+                </div>
+
+                <section class="hero is-medium">
+                    <div class="hero-body"></div>
+                </section>
+
+                <div id="otherExperience" class="container reveal">
+                    <p class="pb-5 green1"><strong class="green1 is-size-3">Other Experience</strong></p>
+                    <div class="card blue2Bg">
+                        <div class="card-content blue3">
+                            <div class="media">
+                                <div class="media-content">
+                                    <p class="cardTitle">Splish Splash Waterpark - Lifeguard</p>
+                                    <p class="cardSubtitle blue4">June 2021 - August 2021</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <section class="hero is-small">
+                        <div class="hero-body"></div>
+                    </section>
+
+                    <div class="card blue2Bg">
+                        <div class="card-content blue3">
+                            <div class="media">
+                                <div class="media-content">
+                                    <p class="cardTitle">Stony Brook University Medical Center - Volunteer</p>
+                                    <p class="cardSubtitle blue4">August 2019 - June 2022</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <section class="hero is-medium">
+                    <div class="hero-body"></div>
+                </section>
+
+                <div id="relevantCoursework" class="container reveal">
+                    <p class="pb-5 green1"><strong class="green1 is-size-3">Relevant Coursework</strong></p>
+                    <div class="columns">
+                        <div class="column">
+                            <div class="card cardHover blue2Bg">
+                                <a href="https://eecs280.org/">
+                                    <div class="card-content blue3">
+                                        <div class="media">
+                                            <div class="media-content">
+                                                <p class="cardTitle">EECS 280: Programming and Data Structures</p>
+                                                <p class="cardSubtitle blue4">January 2023 - April 2023</p>
+                                            </div>
+                                        </div>
+                                        <div class="content blue3">
+                                            University of Michigan
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="column">
+                            <div class="card cardHover blue2Bg">
+                                <a href="https://ece.engin.umich.edu/academics/course-information/course-descriptions/eecs-203/">
+                                    <div class="card-content blue3">
+                                        <div class="media">
+                                            <div class="media-content">
+                                                <p class="cardTitle">EECS 203: Discrete Mathematics</p>
+                                                <p class="cardSubtitle blue4">January 2023 - April 2023</p>
+                                            </div>
+                                        </div>
+                                        <div class="content blue3">
+                                            University of Michigan
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <section class="hero is-small">
+                        <div class="hero-body"></div>
+                    </section>
+
+                    <div class="columns">
+                        <div class="column">
+                            <div class="card cardHover blue2Bg">
+                                <a href="https://eecs183.github.io/eecs183.org/">
+                                    <div class="card-content blue3">
+                                        <div class="media">
+                                            <div class="media-content">
+                                                <p class="cardTitle">EECS 183: Elementary Programming Concepts</p>
+                                                <p class="cardSubtitle blue4">August 2022 - December 2022</p>
+                                            </div>
+                                        </div>
+                                        <div class="content blue3">
+                                            University of Michigan
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="column">
+
+                        </div>
+                    </div>
+                </div>
+            </div>     
+        </section>
+
+        {% include 'footer.html' %}
+
+        {% block content %}
+        {% endblock %}
+
+        <script src="{{ url_for('static', filename='home.js' ) }}"></script>
+        <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    </body>
+</html>

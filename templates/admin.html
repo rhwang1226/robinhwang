@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Robin Hwang</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter&family=M+PLUS+1+Code&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+        <link href="{{ url_for('static', filename='style.css' ) }}" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        {% include 'navbar.html' %}
+
+        <section class="section is-medium blue1Bg">
+            <div class="container">
+                <h1 class="introTitle pb-5 blue4">Admin Panel</h1>
+                <p class="pb-5 green1"><strong class="green1 is-size-3">World of Hellos: Add a Language</strong></p>
+                <form method="post" action="/admin/addlanguage">
+                    <div class="field">
+                        <label class="label blue3">Language Name</label>
+                        <div class="control">
+                          <input id="langAddName" name="langName" class="input defaultFont" type="text" placeholder="e.g. Python">
+                        </div>
+                      </div>
+                      
+                    <div class="field">
+                    <label class="label blue3">Language Family</label>
+                    <div class="control">
+                        <div class="select">
+                            <select class="defaultFont blue3Bg" name="langFamily">
+                                <option>Programming Language</option>
+                                <option>Spoken Language</option>
+                            </select>
+                        </div>
+                    </div>
+                    </div>
+
+                    <div class="field">
+                        <label class="label blue3">Greeting (Say "Hello World")</label>
+                        <div class="control">
+                            <textarea id="langAddGreeting" name="langGreeting" class="textarea defaultFont" placeholder='e.g. print("Hello world")' rows="8"></textarea>
+                        </div>
+                        <p class="help blue4">Use the character '\n' for a new line and the character '\t' to tab in a line.</p>   
+                    </div>
+
+                    <div class="control">
+                        <button id="addLang" class="button blue2Bg blue3 defaultFont" style="border-color: #19376D;">Add Language</button>
+                    </div>
+                </form>
+            </div>
+
+            <section class="hero is-small">
+                <div class="hero-body">
+                </div>
+            </section>
+
+            <div class="container">
+                <p class="pb-5 green1"><strong class="green1 is-size-3">World of Hellos: Delete a Language</strong></p>
+
+                <form method="delete" action="/admin/deletelanguage">
+                    <label class="label blue3">Subject</label>
+                    <div class="field is-grouped">
+                        <div class="control">
+                          <div class="select">
+                            <select class="defaultFont" name="langName">
+                            {% for item in languageRows %}
+                              <option>{{ item["name"] }}</option>
+                            {% endfor %}
+                            </select>
+                          </div>
+                        </div>
+                        
+                        <div class="control">
+                            <button class="button blue2Bg blue3 defaultFont" id="deleteLang" style="border-color: #19376D;">Delete Language</button>
+                        </div>
+                    </div>
+                </form>
+
+            </div>
+        </section>
+
+        {% include 'footer.html' %}
+
+        {% block content %}
+        {% endblock %}
+
+        <script src="{{ url_for('static', filename='admin.js' ) }}"></script>
+        <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    </body>
+</html>

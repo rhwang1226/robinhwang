@@ -1,0 +1,74 @@
+body {
+    font-family: 'Inter', sans-serif;
+}
+
+.codeFont {
+    font-family: 'M PLUS 1 Code', sans-serif;;
+}
+
+.blue1 {
+    background-color: #06283D;
+}
+
+.blue1Bg {
+    background-color: #06283D;
+}
+
+.blue2 {
+    color: #19376D;
+}
+
+.blue2Bg {
+    background-color: #19376D;
+}
+
+.blue3 {
+    color: #05BFDB;
+}
+
+.blue4 {
+    color: #A5D7E8;
+}
+
+.blue4Bg {
+    background-color: #A5D7E8;
+}
+
+.green1 {
+    color: #00FFCA;
+}
+
+.introTitle {
+    font-size: 4.8rem;
+    font-weight: bold;
+}
+
+.subtitle {
+    color:#576CBC;
+}
+
+
+
+.cardTitle {
+    font-size:2rem;
+    font-weight: bold;
+}
+
+.cardSubtitle {
+    font-size:1rem;
+}
+
+.cardHover {
+    transition: all 0.3s;
+}
+
+.cardHover:hover {
+    transform: scale(1.03);
+}
+
+
+@media screen and (min-width: 1408px) {
+    .container:not(.is-max-desktop):not(.is-max-widescreen) {
+        max-width: 960px;
+    }
+}
