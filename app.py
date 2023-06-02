@@ -2,6 +2,7 @@ from flask import Flask, render_template, request, g, jsonify, send_from_directo
 from flask_sqlalchemy import SQLAlchemy
 import sqlite3
 from sqlite3 import Error
+from waitress import serve
 import os
 
 app = Flask(__name__)
@@ -103,4 +104,4 @@ def deleteLanguage():
 
 # Run the Flask application
 if __name__ == '__main__':
-    app.run()
+    serve(app, host='0.0.0.0', port=5000, url_scheme='https')
