@@ -8,9 +8,6 @@ import os
 app = Flask(__name__)
 app.config['DATABASE'] = 'database.db'  # SQLite database file
 
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:////login.db'
-app.config['SECRET_KEY'] = 'thisissecret'
-
 app.static_folder = 'static'
 
 # Define routes and views
