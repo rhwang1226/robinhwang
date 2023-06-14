@@ -1,12 +1,17 @@
-from flask import Flask, render_template, request, g, jsonify, send_from_directory
+from flask import Flask, render_template, request, g, jsonify, send_from_directory, session, redirect, url_for
 from flask_sqlalchemy import SQLAlchemy
 import sqlite3
 from sqlite3 import Error
 from waitress import serve
 import os
+import bcrypt
+from dotenv import load_dotenv
+
+load_dotenv()
 
 app = Flask(__name__)
 app.config['DATABASE'] = 'database.db'  # SQLite database file
+app.config['SECRET_KEY'] = os.environ.get('KEY')
 
 app.static_folder = 'static'
 
@@ -61,8 +66,11 @@ def apiLanguages():
 
 @app.route('/admin')
 def admin():
-    languageRows = apiLanguages()
-    return render_template("admin.html", languageRows=languageRows)
+    if 'authenticated' in session:
+        languageRows = apiLanguages()
+        return render_template("admin.html", languageRows=languageRows)
+    
+    return login()
 
 @app.route('/admin/addlanguage', methods=['GET','POST'])
 def addLanguage():
@@ -98,6 +106,42 @@ def deleteLanguage():
 
     return admin()
 
+@app.route('/admin/login', methods=['GET', 'POST'])
+def login():
+    if 'authenticated' in session:
+        # If the user is already authenticated, redirect to the admin page
+        return redirect(url_for('admin'))
+    
+    error = None
+    if request.method == 'POST':
+        username = request.form['username']
+        password = request.form['password']
+        
+        conn = sqlite3.connect("database.db")
+        cur = conn.cursor()
+        
+        # Retrieve the user record from the database
+        cur.execute("SELECT password, salt FROM login WHERE username=?", (username,))
+        result = cur.fetchone()
+        
+        if result:
+            hashed_password = result[0]
+            salt = result[1]
+            
+            # Verify the password
+            if bcrypt.checkpw(password.encode('utf-8'), hashed_password.encode('utf-8')):
+                session['authenticated'] = True
+                return admin()
+        
+        error = 'Invalid credentials. Please try again.'
+
+    return render_template('adminLogin.html', error=error)
+
+@app.route('/logout')
+def logout():
+    # Clear the session and log out the user
+    session.clear()
+    return redirect(url_for('index'))
 
 # Run the Flask application
 if __name__ == '__main__':
