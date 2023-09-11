@@ -48,6 +48,26 @@ def worldOfHellos():
     con.close()
     return render_template("worldofhellos.html",languageRows=languageRows)
 
+@app.route('/robinchronicles')
+def robinChronicles():
+    return render_template("robinchronicles.html")
+
+@app.route('/api/getblogposts')
+def apiBlogPosts():
+    con = sqlite3.connect("database.db")
+    con.row_factory = sqlite3.Row
+    
+    cur = con.cursor()
+
+    cur.execute("SELECT * FROM blog")
+
+    rows = cur.fetchall()
+    blogPosts = [{"title": row[0], "date": row[1], "text": row[2]} for row in rows]
+    
+    cur.close()
+    con.close()
+    return languageRows;
+
 @app.route('/api/getlanguages')
 def apiLanguages():
     con = sqlite3.connect("database.db")
@@ -137,6 +157,8 @@ def login():
 
     return render_template('adminLogin.html', error=error)
 
+
+
 @app.route('/logout')
 def logout():
     # Clear the session and log out the user
@@ -145,5 +167,5 @@ def logout():
 
 # Run the Flask application
 if __name__ == '__main__':
-    #app.run(debug=True)
-    serve(app, host='0.0.0.0', port=5000, url_scheme='https')
+    app.run(debug=True)
+    #serve(app, host='0.0.0.0', port=5000, url_scheme='https')

@@ -10,6 +10,7 @@ print("Connected to database successfully")
 
 con.execute('DROP TABLE IF EXISTS languages')
 con.execute('DROP TABLE IF EXISTS login')
+con.execute('DROP TABLE IF EXISTS blog')
 
 con.execute('CREATE TABLE languages (name TEXT UNIQUE CHECK(name <> ""), family TEXT NOT NULL, greeting TEXT NOT NULL CHECK(greeting <> ""))')
 con.execute('CREATE TABLE login (username TEXT UNIQUE NOT NULL, password TEXT NOT NULL, salt TEXT NOT NULL)')
