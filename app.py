@@ -28,7 +28,7 @@ def home():
 def resume():
     workingdir = os.path.abspath(os.getcwd())
     filepath = workingdir + '/static/resources/'
-    return send_from_directory(filepath, 'resume.pdf')
+    return send_from_directory(filepath, 'Resume.pdf')
 
 @app.route('/worldofhellos')
 def worldOfHellos():
@@ -167,5 +167,5 @@ def logout():
 
 # Run the Flask application
 if __name__ == '__main__':
-    #app.run(debug=True)
+   #app.run(debug=True)
     serve(app, host='0.0.0.0', port=5000, url_scheme='https')
