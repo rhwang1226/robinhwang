@@ -28,7 +28,7 @@ def home():
 def resume():
     workingdir = os.path.abspath(os.getcwd())
     filepath = workingdir + '/static/resources/'
-    return send_from_directory(filepath, 'Resume.pdf')
+    return send_from_directory(filepath, 'resume.pdf')
 
 @app.route('/worldofhellos')
 def worldOfHellos():
