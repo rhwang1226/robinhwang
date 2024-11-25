@@ -4,7 +4,9 @@ import sqlite3
 from sqlite3 import Error
 from waitress import serve
 import os
-#import bcrypt
+
+import hashlib
+
 from dotenv import load_dotenv
 
 load_dotenv()
@@ -130,6 +132,10 @@ def deleteLanguage():
 
     return admin()
 
+def hash_password(password, salt):
+    """Hash a password with the given salt using hashlib."""
+    return hashlib.pbkdf2_hmac('sha256', password.encode('utf-8'), salt.encode('utf-8'), 100000).hex()
+
 @app.route('/admin/login', methods=['GET', 'POST'])
 def login():
     if 'authenticated' in session:
@@ -149,13 +155,13 @@ def login():
         result = cur.fetchone()
         
         if result:
-            hashed_password = result[0]
+            stored_hashed_password = result[0]
             salt = result[1]
             
             # Verify the password
-            if bcrypt.checkpw(password.encode('utf-8'), hashed_password.encode('utf-8')):
+            if hash_password(password, salt) == stored_hashed_password:
                 session['authenticated'] = True
-                return admin()
+                return redirect(url_for('admin'))
         
         error = 'Invalid credentials. Please try again.'
 
