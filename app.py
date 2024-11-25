@@ -52,6 +52,10 @@ def worldOfHellos():
 def robinChronicles():
     return render_template("robinchronicles.html")
 
+@app.route('/marriagepact2024')
+def robinChronicles():
+    return render_template("mp2024.html")
+
 @app.route('/api/getblogposts')
 def apiBlogPosts():
     con = sqlite3.connect("database.db")

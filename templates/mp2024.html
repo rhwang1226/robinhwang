@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Robin Hwang - Michigan Marriage Pact</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter&family=M+PLUS+1+Code&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+        <link href="{{ url_for('static', filename='style.css' ) }}" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        {% include 'navbar.html' %}
+
+        <section class="section is-medium blue1Bg">
+            <div class="container has-text-centered">
+                <h1 class="introTitle pb-5 blue4">Marriage Pact 2024</h1>
+
+                <p class="blue3" style="font-size:1.5rem;font-weight:bold;">If you're reading this, we matched on the Michigan Marriage Pact!</p>
+                
+                <p class="blue3" style="font-size:1.5rem;font-weight:bold;">This page is currently under renovation - stay tuned!</p>
+
+                <!-- About Me Section -->
+                <section class="section">
+                    <div class="container">
+                        <div class="box blue2Bg">
+                            <h2 class="title blue4">About Me</h2>
+                            <p class="blue3" style="font-size:1.2rem;">
+                                Hi! I'm Robin Hwang, a Computer Science major at the University of Michigan. Outside of class, I love playing tennis, exploring national parks, traveling, and diving into the world of aviation. I also love trying new cuisines.
+                            </p>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="section">
+                    <div class="container">
+                        <div class="box blue2Bg">
+                            <h2 class="title blue4">About Me</h2>
+                            <p class="blue3" style="font-size:1.2rem;">
+                                I would love to learn more about you too and maybe if things work out, maybe we can get coffee or play tennis together and make it a love-all!
+                            </p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Button to Instagram -->
+                <div class="buttons is-centered">
+                    <a class="button is-link is-large" href="https://www.instagram.com/robin.hwang/" target="_blank">
+                        Tell Me More
+                    </a>
+                </div>
+
+                <section class="hero is-small">
+                    <div class="hero-body"></div>
+                </section>
+            </div>
+        </section>
+
+        {% include 'footer.html' %}
+
+        {% block content %}
+        {% endblock %}
+
+        <script src="{{ url_for('static', filename='world.js' ) }}"></script>
+        <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    </body>
+</html>
