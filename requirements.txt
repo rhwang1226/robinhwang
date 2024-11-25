@@ -3,5 +3,4 @@ flask_sqlalchemy
 flask_login
 virtualenv
 waitress
-hashlib
 python-dotenv
