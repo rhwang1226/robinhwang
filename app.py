@@ -4,7 +4,7 @@ import sqlite3
 from sqlite3 import Error
 from waitress import serve
 import os
-import bcrypt
+#import bcrypt
 from dotenv import load_dotenv
 
 load_dotenv()
@@ -53,7 +53,7 @@ def robinChronicles():
     return render_template("robinchronicles.html")
 
 @app.route('/marriagepact2024')
-def robinChronicles():
+def marriage():
     return render_template("mp2024.html")
 
 @app.route('/api/getblogposts')
